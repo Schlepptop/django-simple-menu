@@ -101,7 +101,7 @@ class Menu(object):
         if name is None:
             # special case, process all menus
             items = {}
-            for name in c.items:
+            for name in list(c.items):
                 items[name] = c.process(request, name)
             return items
 
