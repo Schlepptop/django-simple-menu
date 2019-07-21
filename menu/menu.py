@@ -83,7 +83,7 @@ class Menu(object):
         sort_menus goes through the items and sorts them based on
         their weight
         """
-        for name in c.items:
+        for name in list(c.items):
             if not c.sorted[name]:
                 c.items[name].sort(key=lambda x: x.weight)
                 c.sorted[name] = True
